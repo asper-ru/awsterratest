@@ -1,0 +1,5 @@
+# add timestampt to prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) export PS1="\[\033[00;31m\]\D{%Y-%m-%d %T }\[\033[00m\]$PS1";;
+                         *) export PS1="\D{%Y-%m-%d %T }$PS1";;
+esac

@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/focal64"
-  config.vm.hostname = "infra-ansible"
+  config.vm.hostname = "awsterratest"
   config.vm.post_up_message = "README.md can have useful information sometimes!"
   config.vm.synced_folder ".", "/vagrant", type: "rsync",
     rsync__exclude: [".git/", ".terraform*"],
